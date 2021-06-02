@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Roboto;
+    src: url("/roboto/Roboto-Regular.ttf");
+    src: url("/roboto/Roboto-Medium.ttf");
+    src: url("/roboto/Roboto-Light.ttf");
+    src: url("/roboto/Roboto-Thin.ttf");
+    src: url("/shrikhand/Shrikhand-Regular.otf");
+}
+
+$roboto-thin: url("/roboto/Roboto-Thin.ttf");
+$roboto-light: url("/roboto/Roboto-Regular.ttf");
+$roboto-regular: url("/shrikhand/Shrikhand-Regular.otf");
+$roboto-medium: url("/roboto/Roboto-Medium.ttf");
+$shrikhand: url("/shrikhand/Shrikhand-Regular.otf");
+
+$h1-font-size: 1.1em;
+$h2-font-size: 1em;
+$p-font-size:0.8em;
+
+@mixin title-police {
+    
+}

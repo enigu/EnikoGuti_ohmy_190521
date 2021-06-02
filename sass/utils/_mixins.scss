@@ -1,0 +1,37 @@
+$btn-shadow-size: .95rem;
+$box-shadow-colour: rgba(0,0,0,0.2);
+
+@mixin btn-simple-box-shadow ($colour:$box-shadow-colour) {
+    box-shadow: 0 0 $btn-shadow-size $colour; 
+}
+
+@mixin footer-list {
+    text-decoration: none;
+    list-style: none;
+    background-color: $colour-black;
+    color: $colour-white;    
+}
+
+@mixin push--auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin btn-plat ($text, $background) {
+    background: $background;
+    border-radius: 5px;
+    color: $text;
+    padding: 0 8px;
+    text-decoration: none;
+}
+
+@mixin header {
+    text-transform: uppercase;
+    color: $colour-black; 
+    font-family: $roboto-thin;
+    font-size: $p-font-size;
+    font-weight: lighter;
+    border-bottom: 3px solid $colour-tertiary;
+}

@@ -1,0 +1,20 @@
+@font-face {
+  font-family: Roboto;
+  src: url("/roboto/Roboto-Regular.ttf");
+  src: url("/roboto/Roboto-Medium.ttf");
+  src: url("/roboto/Roboto-Light.ttf");
+  src: url("/roboto/Roboto-Thin.ttf");
+  src: url("/shrikhand/Shrikhand-Regular.otf");
+}
+.header {
+  display: flex;
+  justify-content: center;
+  height: 1vh;
+  width: 3vh;
+}
+
+.restaurant-discovery {
+  background-color: red;
+}
+
+/*# sourceMappingURL=main.css.map */
