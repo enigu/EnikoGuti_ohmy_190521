@@ -1,0 +1,13 @@
+@import "../utils/variables";
+
+.btn-gradient {
+    background-color: $colour-primary;
+    color: $colour-white;
+    border-radius: 50px;
+    border: 1px solid $colour-primary;
+    width: 14em;
+    height: 2.8em;
+    text-align: center;
+    margin: 1em;
+    font-size: inherit;
+}

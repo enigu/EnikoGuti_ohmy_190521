@@ -1,11 +1,12 @@
-@import "./utils/variables";
-@import "./base/typography";
-@import "./utils/mixins";
-@import "./layout/footer";
-@import "./layout/header";
-@import "./components/buttons";
-@import "./pages/home";
-@import "./pages/restaurant";
+@import "../sass/utils/mixins";
+@import "../sass/utils/variables";
+@import "../sass/base/typography";
+@import "../sass/components/buttons";
+@import "../sass/layout/footer";
+@import "../sass/layout/header";
+@import "../sass/pages/home";
+@import "../sass/pages/restaurant";
+
 
 
 

@@ -6,15 +6,63 @@
   src: url("/roboto/Roboto-Thin.ttf");
   src: url("/shrikhand/Shrikhand-Regular.otf");
 }
-.header {
-  display: flex;
-  justify-content: center;
-  height: 1vh;
-  width: 3vh;
+.btn-gradient {
+  background-color: #9356DC;
+  color: #FFF;
+  border-radius: 50px;
+  border: 1px solid #9356DC;
+  width: 14em;
+  height: 2.8em;
+  text-align: center;
+  margin: 1em;
+  font-size: inherit;
 }
 
-.restaurant-discovery {
-  background-color: red;
+@font-face {
+  font-family: Roboto;
+  src: url("/roboto/Roboto-Regular.ttf");
+  src: url("/roboto/Roboto-Medium.ttf");
+  src: url("/roboto/Roboto-Light.ttf");
+  src: url("/roboto/Roboto-Thin.ttf");
+  src: url("/shrikhand/Shrikhand-Regular.otf");
+}
+footer {
+  background-color: #000;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 18vh;
+}
+footer h1 {
+  background-color: #000;
+  color: #FFF;
+  margin-left: 36px;
+  margin-bottom: 0.1em;
+  font-size: 1.1em;
+}
+
+ul {
+  background-color: #000;
+  color: #FFF;
+  padding: 0;
+  margin-left: 36px;
+}
+ul li {
+  display: block;
+}
+ul li a {
+  font-size: 0.8em;
+  color: #FFF;
+  text-decoration: none;
+  list-style: none;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+  width: 12em;
+  height: 2.6em;
 }
 
 /*# sourceMappingURL=main.css.map */

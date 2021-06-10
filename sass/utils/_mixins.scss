@@ -1,3 +1,5 @@
+@import "../utils/variables";
+
 $btn-shadow-size: .95rem;
 $box-shadow-colour: rgba(0,0,0,0.2);
 
@@ -6,10 +8,25 @@ $box-shadow-colour: rgba(0,0,0,0.2);
 }
 
 @mixin footer-list {
-    text-decoration: none;
-    list-style: none;
     background-color: $colour-black;
     color: $colour-white;    
+}
+
+@mixin footer {
+    background-color: $colour-black;
+    color: $colour-white;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: 18vh;
+}
+
+@mixin li {
+    
+    font-size: $p-font-size;
+    color: $colour-white;
+    text-decoration: none;
+    list-style: none;
 }
 
 @mixin push--auto {
