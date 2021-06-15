@@ -1,10 +1,36 @@
 @font-face {
-  font-family: Roboto;
-  src: url("/roboto/Roboto-Regular.ttf");
-  src: url("/roboto/Roboto-Medium.ttf");
-  src: url("/roboto/Roboto-Light.ttf");
-  src: url("/roboto/Roboto-Thin.ttf");
-  src: url("/shrikhand/Shrikhand-Regular.otf");
+  font-family: "Roboto";
+  src: url('url("./roboto/Roboto-Thin.ttf")/Roboto-Thin.ttf') format("ttf");
+  font-weight: 100;
+  src: url('url("./roboto/Roboto-Light.ttf")/Roboto-Light.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 200;
+  src: url('url("./roboto/Roboto-Regular.ttf")/Roboto-Regular.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 300;
+  src: url('url("./roboto/Roboto-Medium.ttf")/Roboto-Medium.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 400;
+  font-family: "Shrikhand";
+  src: url('url("./shrikhand/Shrikhand-Regular.otf")/Shrikhand-Regular.otf') format("otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url('url("./roboto/Roboto-Thin.ttf")/Roboto-Thin.ttf') format("ttf");
+  font-weight: 100;
+  src: url('url("./roboto/Roboto-Light.ttf")/Roboto-Light.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 200;
+  src: url('url("./roboto/Roboto-Regular.ttf")/Roboto-Regular.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 300;
+  src: url('url("./roboto/Roboto-Medium.ttf")/Roboto-Medium.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 400;
+  font-family: "Shrikhand";
+  src: url('url("./shrikhand/Shrikhand-Regular.otf")/Shrikhand-Regular.otf') format("otf");
+  font-weight: 700;
 }
 .btn-gradient {
   background-color: #9356DC;
@@ -18,13 +44,56 @@
   font-size: inherit;
 }
 
+.btn-options {
+  background-color: #f4f5f7;
+  border: 1px solid #f4f5f7;
+  border-radius: 18px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: 8px 24px;
+  height: 4.2em;
+  width: 24em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-options-purple {
+  background-color: #e5d9f3;
+  border: 1px solid #e5d9f3;
+  border-radius: 18px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: 8px 24px;
+  height: 4.2em;
+  width: 24em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 @font-face {
-  font-family: Roboto;
-  src: url("/roboto/Roboto-Regular.ttf");
-  src: url("/roboto/Roboto-Medium.ttf");
-  src: url("/roboto/Roboto-Light.ttf");
-  src: url("/roboto/Roboto-Thin.ttf");
-  src: url("/shrikhand/Shrikhand-Regular.otf");
+  font-family: "Roboto";
+  src: url('url("./roboto/Roboto-Thin.ttf")/Roboto-Thin.ttf') format("ttf");
+  font-weight: 100;
+  src: url('url("./roboto/Roboto-Light.ttf")/Roboto-Light.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 200;
+  src: url('url("./roboto/Roboto-Regular.ttf")/Roboto-Regular.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 300;
+  src: url('url("./roboto/Roboto-Medium.ttf")/Roboto-Medium.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 400;
+  font-family: "Shrikhand";
+  src: url('url("./shrikhand/Shrikhand-Regular.otf")/Shrikhand-Regular.otf') format("otf");
+  font-weight: 700;
 }
 footer {
   background-color: #000;
@@ -37,16 +106,17 @@ footer {
 footer h1 {
   background-color: #000;
   color: #FFF;
-  margin-left: 36px;
+  margin-left: 0.6em;
   margin-bottom: 0.1em;
   font-size: 1.1em;
+  font-family: "Shrikhand";
 }
 
 ul {
   background-color: #000;
   color: #FFF;
   padding: 0;
-  margin-left: 36px;
+  margin-left: 0.6em;
 }
 ul li {
   display: block;
@@ -61,8 +131,127 @@ ul li a {
 header img {
   display: block;
   margin: 0 auto;
-  width: 12em;
-  height: 2.6em;
+  width: 10em;
+  height: 2em;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url('url("./roboto/Roboto-Thin.ttf")/Roboto-Thin.ttf') format("ttf");
+  font-weight: 100;
+  src: url('url("./roboto/Roboto-Light.ttf")/Roboto-Light.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 200;
+  src: url('url("./roboto/Roboto-Regular.ttf")/Roboto-Regular.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 300;
+  src: url('url("./roboto/Roboto-Medium.ttf")/Roboto-Medium.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 400;
+  font-family: "Shrikhand";
+  src: url('url("./shrikhand/Shrikhand-Regular.otf")/Shrikhand-Regular.otf') format("otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url('url("./roboto/Roboto-Thin.ttf")/Roboto-Thin.ttf') format("ttf");
+  font-weight: 100;
+  src: url('url("./roboto/Roboto-Light.ttf")/Roboto-Light.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 200;
+  src: url('url("./roboto/Roboto-Regular.ttf")/Roboto-Regular.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 300;
+  src: url('url("./roboto/Roboto-Medium.ttf")/Roboto-Medium.ttf') format("ttf");
+  font-family: "Roboto";
+  font-weight: 400;
+  font-family: "Shrikhand";
+  src: url('url("./shrikhand/Shrikhand-Regular.otf")/Shrikhand-Regular.otf') format("otf");
+  font-weight: 700;
+}
+.map {
+  background-color: #d6d3d3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.map p {
+  padding-left: 8px;
+}
+
+.restaurant-discovery {
+  background-color: #f4f5f7;
+  display: inline-block;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.restaurant-discovery h1 {
+  display: inline-block;
+  text-align: center;
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+}
+.restaurant-discovery p {
+  display: inline-block;
+  text-align: center;
+  margin-top: 0.2em;
+  margin-bottom: 0.4em;
+}
+
+.btn-gradient {
+  text-align: center;
+}
+
+.options h1 {
+  margin-left: 0.6em;
+}
+
+.options-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.circle {
+  border: 1px solid #9356DC;
+  background-color: #9356DC;
+  border-radius: 50px;
+  color: #FFF;
+  margin: 1rem 1rem 1rem -5.5rem;
+  width: 1.3em;
+  height: 1.3em;
+  display: inline-block;
+  text-align: center;
+}
+.circle p {
+  display: inline;
+  text-align: center;
+  padding: 1px;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.5rem;
+}
+.info p {
+  padding-left: 2rem;
+}
+
+.fa-mobile-alt {
+  padding-right: 1em;
+}
+
+.fa-store {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=main.css.map */

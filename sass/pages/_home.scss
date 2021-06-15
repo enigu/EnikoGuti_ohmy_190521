@@ -1,0 +1,89 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../base/typography";
+
+.map {
+    background-color: $colour-grey-map;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.map p {
+    padding-left: 8px;
+}
+
+.restaurant-discovery {
+    background-color: $colour-grey-discovery;
+    display: inline-block;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    h1 {
+        //*@include title-h1;
+        @include inline-block;
+        margin-top: 0.4em;
+        margin-bottom: 0.2em;
+    }
+    p {
+        @include inline-block;
+        margin-top: 0.2em;
+        margin-bottom: 0.4em;
+    }
+}
+
+.btn-gradient {
+    text-align: center;
+}
+
+.options {
+    h1 {
+        margin-left: $margin-home-page;
+    }
+}
+
+.options-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.circle {
+    border: 1px solid $colour-primary;
+    background-color: $colour-primary;
+    border-radius: 50px;
+    color: $colour-white;
+    margin: 1rem 1rem 1rem -5.5rem;
+    width: 1.3em;
+    height: 1.3em;
+    display: inline-block;
+    text-align: center;
+    p {
+        display: inline;
+        text-align: center;
+        padding: 1px;
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    p {
+        padding-left: 2rem;   
+    }
+}
+
+.fa-mobile-alt {
+    padding-right: 1em;
+}
+
+.fa-store {
+    color: $colour-primary;
+}

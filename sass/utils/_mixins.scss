@@ -1,15 +1,11 @@
 @import "../utils/variables";
+@import "../base/typography";
 
 $btn-shadow-size: .95rem;
 $box-shadow-colour: rgba(0,0,0,0.2);
 
 @mixin btn-simple-box-shadow ($colour:$box-shadow-colour) {
     box-shadow: 0 0 $btn-shadow-size $colour; 
-}
-
-@mixin footer-list {
-    background-color: $colour-black;
-    color: $colour-white;    
 }
 
 @mixin footer {
@@ -21,8 +17,22 @@ $box-shadow-colour: rgba(0,0,0,0.2);
     height: 18vh;
 }
 
+@mixin footer--h1 {
+    background-color: $colour-black;
+    color: $colour-white;
+    margin-left: $margin-home-page;
+    margin-bottom: 0.1em;
+    font-size: $h1-font-size;
+    font-family: "Shrikhand";
+}
+@mixin footer-list {
+    background-color: $colour-black;
+    color: $colour-white;
+    padding: 0;
+    margin-left: $margin-home-page;   
+}
+
 @mixin li {
-    
     font-size: $p-font-size;
     color: $colour-white;
     text-decoration: none;
@@ -51,4 +61,15 @@ $box-shadow-colour: rgba(0,0,0,0.2);
     font-size: $p-font-size;
     font-weight: lighter;
     border-bottom: 3px solid $colour-tertiary;
+}
+
+@mixin title-h1 {
+    font-family:"Roboto";
+    $h1-font-size: 1.1em;
+    font-weight: 300;
+}
+
+@mixin inline-block {
+    display: inline-block;   
+    text-align: center; 
 }

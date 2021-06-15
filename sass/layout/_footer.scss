@@ -1,23 +1,16 @@
 @import "../utils/mixins";
 @import "../utils/variables";
-@import "../base/typography";
 
 footer {
     @include footer;
     h1 {
-    background-color: $colour-black;
-    color: $colour-white;
-    margin-left: 36px;
-    margin-bottom: 0.1em;
-    font-size: $h1-font-size;
+    @include footer--h1;
     }
 }    
 ul {
     @include footer-list;
-    padding: 0;
-    margin-left: 36px;
     li {
-        display: block;;
+        display: block;
     }
         li a {
             @include li;
