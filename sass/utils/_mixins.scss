@@ -65,8 +65,15 @@ $box-shadow-colour: rgba(0,0,0,0.2);
 
 @mixin title-h1 {
     font-family:"Roboto";
-    $h1-font-size: 1.1em;
+    font-size: $h1-font-size;
     font-weight: 300;
+}
+
+@mixin title-h2 {
+    font-family:"Roboto";
+    font-size: $h2-font-size;
+    font-weight: 200;
+    color: $colour-black;
 }
 
 @mixin inline-block {

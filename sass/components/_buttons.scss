@@ -45,3 +45,16 @@
     align-items: center;
     justify-content: center;
 }
+
+.btn-new {
+    border: 1px solid $colour-tertiary;
+    color: $colour-green-new;
+    padding: 8px 24px;
+    border-radius: 4px;
+    background: $colour-tertiary;
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
