@@ -1,6 +1,12 @@
-header img {
+header {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    img {
     display: block;
-    margin: 0 auto;
+    margin: auto;
+    text-align: center;
     width: 10em;
     height: 2em;
-}
+    }
+}    

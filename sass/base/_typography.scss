@@ -1,33 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap');
 
-$roboto-thin: url("./roboto/Roboto-Thin.ttf");
-$roboto-light: url("./roboto/Roboto-Light.ttf");
-$roboto-regular: url("./roboto/Roboto-Regular.ttf");
-$roboto-medium: url("./roboto/Roboto-Medium.ttf");
-$shrikhand: url("./shrikhand/Shrikhand-Regular.otf"); 
 
-@font-face {
-    font-family:"Roboto";
-    src: url("#{$roboto-thin}/Roboto-Thin.ttf") format("ttf");
-    font-weight: 100;
+$roboto-thin: 'Roboto Thin', sans-serif;
+$roboto-light: 'Roboto Light', sans-serif;
+$roboto-regular: 'Roboto Regular', sans-serif;
+$roboto-medium: 'Roboto Medium', sans-serif;
+$shrikhand: 'Shrikhand';
 
-    src: url("#{$roboto-light}/Roboto-Light.ttf") format("ttf");
-    font-family: "Roboto";
-    font-weight: 200;
-
-    src: url("#{$roboto-regular}/Roboto-Regular.ttf") format("ttf");
-    font-family: "Roboto";
-    font-weight: 300;
-
-    src: url("#{$roboto-medium}/Roboto-Medium.ttf") format("ttf");
-    font-family: "Roboto";
-    font-weight: 400;
-
-    font-family: "Shrikhand";
-    src: url("#{$shrikhand}/Shrikhand-Regular.otf") format("otf");
-    font-weight: 700;
-
-}
-$h1-font-size: 1.1em;
+$h1-font-size: 1.3em;
 $h2-font-size: 1em;
-$p-font-size:0.8em;
+$p-font-size:1em;
 
