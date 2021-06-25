@@ -4,15 +4,16 @@
 
 .map {
     background-color: $colour-grey-map;
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
+    height: 6vh;
+    width: 100%;
 }
 
 .map p {
     @include p-normal;
-    padding-left: 8px;
+    margin-left: 8px;
 }
 
 .restaurant-discovery {
@@ -49,8 +50,8 @@
 .options-buttons {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle {
@@ -58,7 +59,7 @@
     background-color: $colour-primary;
     border-radius: 50px;
     color: $colour-white;
-    margin: 1rem 1rem 1rem -1rem;
+    margin: 1rem 0rem 1rem -0.5rem;
     width: 1.3em;
     height: 1.3em;
     display: inline-block;
@@ -72,9 +73,9 @@
 }
 
 .info {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    margin-right: auto;
+    margin: auto;
     p {
         @include p-normal;
     }

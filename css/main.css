@@ -34,7 +34,7 @@
   margin-bottom: 1em;
   margin-left: 1em;
   margin-right: 1em;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
@@ -71,6 +71,11 @@
   border: 1px solid #FFF;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: center;
+  align-items: flex-start;
   width: 100%;
   height: 8vh;
   margin-bottom: 1em;
@@ -79,16 +84,16 @@
 footer {
   background-color: #000;
   color: #FFF;
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
   width: 100%;
-  height: 18vh;
+  height: 24vh;
 }
 footer h1 {
   background-color: #000;
   color: #FFF;
   margin-left: 0.6em;
-  margin-bottom: 0.1em;
+  margin-bottom: 0.8em;
+  margin-top: 0.8em;
   font-size: 1.3em;
   font-family: "Shrikhand";
 }
@@ -109,11 +114,13 @@ ul li a {
   color: #FFF;
   text-decoration: none;
   list-style: none;
+  line-height: 1.6rem;
 }
 
 header {
-  width: 100%;
-  display: flex;
+  height: 8vh;
+  width: 99%;
+  display: inline-flex;
   align-items: baseline;
   background-color: #FFF;
 }
@@ -127,10 +134,11 @@ header img {
 
 .map {
   background-color: #d6d3d3;
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
+  height: 6vh;
+  width: 100%;
 }
 
 .map p {
@@ -138,7 +146,7 @@ header img {
   font-size: 1em;
   font-weight: 500;
   color: #000;
-  padding-left: 8px;
+  margin-left: 8px;
 }
 
 .restaurant-discovery {
@@ -184,8 +192,8 @@ header img {
 .options-buttons {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
 .circle {
@@ -193,7 +201,7 @@ header img {
   background-color: #9356DC;
   border-radius: 50px;
   color: #FFF;
-  margin: 1rem 1rem 1rem -1rem;
+  margin: 1rem 0rem 1rem -0.5rem;
   width: 1.3em;
   height: 1.3em;
   display: inline-block;
@@ -207,9 +215,9 @@ header img {
 }
 
 .info {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  margin-right: auto;
+  margin: auto;
 }
 .info p {
   font-family: "Roboto Regular", sans-serif;
@@ -317,24 +325,22 @@ i.fas.fa-heart {
 }
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
 i.fas.fa-arrow-left {
-  display: block;
+  display: inline-block;
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
+  margin-left: 0.8em;
 }
 
 .restaurant-menu {
   background-color: #f4f5f7;
   box-shadow: 0 0 0.95rem rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: block;
   width: 100%;
 }
 
@@ -347,9 +353,90 @@ i.fas.fa-arrow-left {
 .menu-card {
   background-color: #f4f5f7;
   border-radius: 24px 24px 0px 0px;
-  padding-top: 0.5rem;
+  padding-top: 1.5rem;
   width: 100%;
   margin-top: -3rem;
+}
+
+.title-heart {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-left: 0.8em;
+  margin-right: 0.6em;
+}
+.title-heart h1 {
+  font-family: "Shrikhand";
+  font-size: 1.8rem;
+  color: #000;
+}
+
+#big-heart {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.8rem;
+}
+
+.dish-buttons {
+  display: inline-block;
+  margin: 0.8em;
+  width: 95%;
+}
+
+.block-dishes {
+  width: 95%;
+  margin: auto;
+}
+.block-dishes h4 {
+  font-family: "Roboto Light", sans-serif;
+  font-size: 1em;
+  font-weight: 200;
+  color: #000;
+  margin-left: 0.8em;
+  text-transform: uppercase;
+  position: relative;
+  line-height: 2rem;
+}
+.block-dishes h4::after {
+  content: "";
+  height: 4px;
+  width: 10%;
+  background: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.dish {
+  margin-left: 0.8em;
+}
+.dish h3 {
+  font-family: "Roboto Regular", sans-serif;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #000;
+  line-height: 1.4em;
+}
+
+.price {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.8em;
+}
+.price h6 {
+  font-family: "Roboto Light", sans-serif;
+  font-size: 1.2em;
+  font-weight: 200;
+  color: #000;
+  line-height: 1.4em;
+  margin-right: 2rem;
+}
+.price p {
+  margin-left: 6rem;
+  font-family: "Roboto Regular", sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000;
+  line-height: 1.4em;
 }
 
 /*# sourceMappingURL=main.css.map */

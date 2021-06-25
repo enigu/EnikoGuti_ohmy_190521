@@ -11,17 +11,17 @@ $box-shadow-colour: rgba(0,0,0,0.2);
 @mixin footer {
     background-color: $colour-black;
     color: $colour-white;
-    display:flex;
-    flex-direction: column;
+    display:inline-block;
     width: 100%;
-    height: 18vh;
+    height: 24vh;
 }
 
 @mixin footer--h1 {
     background-color: $colour-black;
     color: $colour-white;
     margin-left: $margin-home-page;
-    margin-bottom: 0.1em;
+    margin-bottom: $margin-left;
+    margin-top: $margin-left;
     font-size: $h1-font-size;
     font-family: 'Shrikhand';
 }
@@ -29,7 +29,7 @@ $box-shadow-colour: rgba(0,0,0,0.2);
     background-color: $colour-black;
     color: $colour-white;
     padding: 0;
-    margin-left: $margin-home-page;   
+    margin-left: $margin-home-page;  
 }
 
 @mixin li {
@@ -39,6 +39,7 @@ $box-shadow-colour: rgba(0,0,0,0.2);
     color: $colour-white;
     text-decoration: none;
     list-style: none;
+    line-height: 1.6rem;
 }
 
 @mixin push--auto {
@@ -74,9 +75,32 @@ $box-shadow-colour: rgba(0,0,0,0.2);
 
 @mixin title-h2 {
     font-family: $roboto-medium;
-    font-size: $h2-font-size;
+    font-size: $p-font-size;
     font-weight: bold;
     color: $colour-black;
+}
+
+@mixin title-h3 {
+    font-family: $roboto-regular;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: $colour-black;
+    line-height: 1.4em;
+}
+
+@mixin title-h4 {
+    font-family: $roboto-light;
+    font-size: $p-font-size;
+    font-weight: 200;
+    color: $colour-black;
+}
+
+@mixin title-h6 {
+    font-family: $roboto-light;
+    font-size: 1.2em;
+    font-weight: 200;
+    color: $colour-black;
+    line-height: 1.4em;
 }
 
 @mixin p-normal {
