@@ -1,8 +1,10 @@
 @import "../utils/variables";
 
 .btn-gradient {
-    background-color: $colour-primary;
+    background-image: linear-gradient(to bottom, $colour-secondary, $colour-primary);
+    border: 0;
     color: $colour-white;
+    cursor: pointer;
     border-radius: 50px;
     border: 1px solid $colour-primary;
     width: 14em;
@@ -10,6 +12,11 @@
     text-align: center;
     margin: 1em;
     font-size: inherit;
+
+    &:hover {
+        background-image: radial-gradient(circle, lighten($colour-secondary, 5) 0%, darken($colour-primary, 5) 100%);
+
+    }
 }
 
 .btn-options {
@@ -25,21 +32,36 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        background: lighten($colour-primary, 32);
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: top;
+        transition: transform 200ms ease-in;
+    }
+    &:hover {
+        &::after{
+           transform: scaleX(1);
+           transform-origin: bottom;
+        }
+    }
 }
 
-.btn-options-purple {
-    background-color: $colour-btn-purple;
-    border: 1px solid $colour-btn-purple;
-    border-radius: 18px;
-    box-shadow: $box-shadow;
-    height: 4.2em;
-    width: 24em;
-    margin-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.fa-mobile-alt {
+    background: $colour-black;
+    transform: scaleX(0);
+    transition: transform 200ms ease-in;
 }
 
 .btn-new {
@@ -60,13 +82,25 @@
     border-radius: 12px;
     box-shadow: $box-shadow;
     display: inline-flex;
-    flex-direction: column;
-    align-content: space-between;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
     width: 100%;
     height: 8vh;
     margin-bottom: 1em;
-    
-}
+    h3 {
+        @include title-h3;
+        margin-left: $margin-left;
+    }
+    h6 {
+        @include title-h6;
+        margin-left: $margin-left;
+    }
+    &:hover .check{
+        transform: scale(1);
+    }    
+}    
+
+
+
 

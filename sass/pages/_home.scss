@@ -89,7 +89,6 @@
 }
 
 .fa-store {
-    color: $colour-primary;
     margin-right: 1em;
 }
 
@@ -101,6 +100,10 @@
         @include title-h1;
         margin-left: $margin-home-page;
     }
+}
+
+.cards {
+    width: 98%;
 }
 
 .restaurant-card {
@@ -152,14 +155,71 @@
     }
 }
 
-i.far.fa-heart {
+#purple-heart {
     color: $colour-black;
+    cursor: pointer;
+    background: $colour-white;
     margin-bottom: 2.5rem;
     margin-right: 1rem;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        background: radial-gradient(circle, lighten($colour-secondary, 5) 0%, darken($colour-primary, 10) 100%);
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: top;
+        transition: transform 200ms ease-in;
+    }
+
+    &:hover {
+        &::after{
+           transform: scaleX(1);
+           transform-origin: bottom;
+        }
+    }
 }
 
-i.fas.fa-heart{
-    color: $colour-primary;
-    margin-bottom: 2.5rem;
-    margin-right: 1rem;
-}
+.load {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .load__bar {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: ld-bar 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .load__bar--1 {
+    animation-delay: -0.45s;
+  }
+  .load__bar--2 {
+    animation-delay: -0.3s;
+  }
+  .load__bar--3 {
+    animation-delay: -0.15s;
+  }
+  @keyframes ls-bar {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+

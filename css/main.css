@@ -13,8 +13,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap");
 .btn-gradient {
-  background-color: #9356DC;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  border: 0;
   color: #FFF;
+  cursor: pointer;
   border-radius: 50px;
   border: 1px solid #9356DC;
   width: 14em;
@@ -22,6 +24,9 @@
   text-align: center;
   margin: 1em;
   font-size: inherit;
+}
+.btn-gradient:hover {
+  background-image: radial-gradient(circle, #ff93e1 0%, #8641d8 100%);
 }
 
 .btn-options {
@@ -37,21 +42,33 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.btn-options::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: #e9ddf8;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: top;
+  transition: transform 200ms ease-in;
+}
+.btn-options:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom;
 }
 
-.btn-options-purple {
-  background-color: #e5d9f3;
-  border: 1px solid #e5d9f3;
-  border-radius: 18px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  height: 4.2em;
-  width: 24em;
-  margin-bottom: 1em;
-  margin-left: 1em;
-  margin-right: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.fa-mobile-alt {
+  background: #000;
+  transform: scaleX(0);
+  transition: transform 200ms ease-in;
 }
 
 .btn-new {
@@ -72,13 +89,31 @@
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: inline-flex;
-  flex-direction: column;
-  align-content: space-between;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
   width: 100%;
   height: 8vh;
   margin-bottom: 1em;
+}
+.btn-simple h3 {
+  font-family: "Roboto Regular", sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000;
+  line-height: 1.4em;
+  margin-left: 0.8em;
+}
+.btn-simple h6 {
+  font-family: "Roboto Light", sans-serif;
+  font-size: 1.2em;
+  font-weight: 200;
+  color: #000;
+  line-height: 1.4em;
+  margin-left: 0.8em;
+}
+.btn-simple:hover .check {
+  transform: scale(1);
 }
 
 footer {
@@ -235,7 +270,6 @@ header img {
 }
 
 .fa-store {
-  color: #9356DC;
   margin-right: 1em;
 }
 
@@ -250,6 +284,10 @@ header img {
   font-weight: bold;
   color: #000;
   margin-left: 0.6em;
+}
+
+.cards {
+  width: 98%;
 }
 
 .restaurant-card {
@@ -308,18 +346,74 @@ header img {
   color: #000;
 }
 
-i.far.fa-heart {
+#purple-heart {
   color: #000;
+  cursor: pointer;
+  background: #FFF;
   margin-bottom: 2.5rem;
   margin-right: 1rem;
+  position: relative;
+  z-index: 1;
+}
+#purple-heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: radial-gradient(circle, #ff93e1 0%, #782cd3 100%);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: top;
+  transition: transform 200ms ease-in;
+}
+#purple-heart:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom;
 }
 
-i.fas.fa-heart {
-  color: #9356DC;
-  margin-bottom: 2.5rem;
-  margin-right: 1rem;
+.load {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
 }
 
+.load__bar {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: ld-bar 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.load__bar--1 {
+  animation-delay: -0.45s;
+}
+
+.load__bar--2 {
+  animation-delay: -0.3s;
+}
+
+.load__bar--3 {
+  animation-delay: -0.15s;
+}
+
+@keyframes ls-bar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 :root {
   --surface-color:$colour-grey-discovery;
 }
@@ -369,6 +463,7 @@ i.fas.fa-arrow-left {
   font-family: "Shrikhand";
   font-size: 1.8rem;
   color: #000;
+  margin-left: 0.8em;
 }
 
 #big-heart {
@@ -407,36 +502,67 @@ i.fas.fa-arrow-left {
 }
 
 .dish {
-  margin-left: 0.8em;
-}
-.dish h3 {
-  font-family: "Roboto Regular", sans-serif;
-  font-size: 1.4em;
-  font-weight: bold;
-  color: #000;
-  line-height: 1.4em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .price {
   display: inline-flex;
   align-items: center;
-  margin-left: 0.8em;
-}
-.price h6 {
-  font-family: "Roboto Light", sans-serif;
-  font-size: 1.2em;
-  font-weight: 200;
-  color: #000;
-  line-height: 1.4em;
-  margin-right: 2rem;
+  margin-right: 0.8em;
 }
 .price p {
-  margin-left: 6rem;
   font-family: "Roboto Regular", sans-serif;
   font-size: 1.2em;
   font-weight: bold;
   color: #000;
   line-height: 1.4em;
+}
+
+.fa-check-circle {
+  width: 1em;
+  height: 1em;
+  background-color: #FFF;
+  color: #99E2D0;
+}
+
+.check {
+  background-color: #99E2D0;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 8vw;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+}
+.check:hover .fa-check-circle {
+  transform: rotate(360deg);
+  transition: transform 500ms ease-in-out;
+}
+
+@keyframes delay {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.batch {
+  animation: delay 1000ms 150ms;
+}
+.batch--1 {
+  animation-delay: 250ms;
+}
+.batch--2 {
+  animation-delay: 500ms;
+}
+.batch--3 {
+  animation-delay: 750ms;
 }
 
 /*# sourceMappingURL=main.css.map */
