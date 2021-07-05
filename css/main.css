@@ -544,7 +544,7 @@ i.fas.fa-arrow-left {
   transition: transform 500ms ease-in-out;
 }
 
-@keyframes delay {
+@keyframes delaid {
   0% {
     transform: scaleY(0);
   }
@@ -552,8 +552,12 @@ i.fas.fa-arrow-left {
     transform: scaleY(1);
   }
 }
+.block-dishes {
+  animation: delaid 1000ms;
+}
+
 .batch {
-  animation: delay 1000ms 150ms;
+  animation: delaid 1000ms 150ms;
 }
 .batch--1 {
   animation-delay: 250ms;
