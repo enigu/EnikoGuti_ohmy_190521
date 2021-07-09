@@ -346,74 +346,49 @@ header img {
   color: #000;
 }
 
-#purple-heart {
-  color: #000;
-  cursor: pointer;
-  background: #FFF;
-  margin-bottom: 2.5rem;
-  margin-right: 1rem;
-  position: relative;
-  z-index: 1;
+.hover-heart:hover .purple-heart {
+  transform: scale(1);
+  transition: 0.5s;
 }
-#purple-heart::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  left: 0;
+
+.purple-heart {
   background: radial-gradient(circle, #ff93e1 0%, #782cd3 100%);
-  z-index: -1;
-  transform: scaleX(0);
-  transform-origin: top;
-  transition: transform 200ms ease-in;
-}
-#purple-heart:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0);
 }
 
-.load {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
+/*#purple-heart {
+    color: $colour-black;
+    cursor: pointer;
+    background: $colour-white;
+    margin-bottom: 2.5rem;
+    margin-right: 1rem;
+    position: relative;
+    z-index: 1;
 
-.load__bar {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border: 8px solid #fff;
-  border-radius: 50%;
-  animation: ld-bar 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #fff transparent transparent transparent;
-}
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        background: radial-gradient(circle, lighten($colour-secondary, 5) 0%, darken($colour-primary, 10) 100%);
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: top;
+        transition: transform 200ms ease-in;
+    }
 
-.load__bar--1 {
-  animation-delay: -0.45s;
-}
-
-.load__bar--2 {
-  animation-delay: -0.3s;
-}
-
-.load__bar--3 {
-  animation-delay: -0.15s;
-}
-
-@keyframes ls-bar {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+    &:hover {
+        &::after{
+           transform: scaleX(1);
+           transform-origin: bottom;
+        }
+    }
+}*/
 :root {
   --surface-color:$colour-grey-discovery;
 }
