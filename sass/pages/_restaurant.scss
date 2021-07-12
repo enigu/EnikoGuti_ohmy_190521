@@ -111,6 +111,12 @@ i.fas.fa-arrow-left {
     height: 1em;
     background-color: $colour-white;
     color: $colour-tertiary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .check {
@@ -119,7 +125,8 @@ i.fas.fa-arrow-left {
     border-radius: 12px;
     box-shadow: $box-shadow;
     width: 8vw;
-    height: 8vh;
+    height: 8.2vh;
+    margin-right: -0.8em;
     
     display: flex;
     align-items: center;
@@ -149,15 +156,20 @@ $anim-delay: $anim-dur / $num-bars;
 
 .block-dishes {
     animation: delaid $anim-dur;
+    animation-delay: 500ms;
 }
 
 .batch {
-    animation: delaid $anim-dur 150ms;
+    animation: delaid $anim-dur 250ms;
     @for $i from 1 to $num-bars {
         &--#{$i} {
             animation-delay: $anim-delay * $i;
-         }    
+         }
     }
 }
+
+
+
+
 
 

@@ -358,6 +358,10 @@ header img {
   transform: scale(0);
 }
 
+i.far.fa-heart.fa-stack-1x {
+  border: #000;
+}
+
 /*#purple-heart {
     color: $colour-black;
     cursor: pointer;
@@ -389,6 +393,42 @@ header img {
         }
     }
 }*/
+.load {
+  display: flex;
+  justify-content: space-evenly;
+}
+.load__ball {
+  background-color: #9356DC;
+  height: 100%;
+  width: 3vh;
+  animation: grow 1000ms;
+  animation-fill-mode: forwards;
+}
+
+.load__ball {
+  animation: grow 1000ms;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+.load__ball--1 {
+  animation-delay: 333.3333333333ms;
+}
+.load__ball--2 {
+  animation-delay: 666.6666666667ms;
+}
+.load__ball--3 {
+  animation-delay: 1000ms;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 :root {
   --surface-color:$colour-grey-discovery;
 }
@@ -500,6 +540,13 @@ i.fas.fa-arrow-left {
   height: 1em;
   background-color: #FFF;
   color: #99E2D0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .check {
@@ -508,7 +555,8 @@ i.fas.fa-arrow-left {
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   width: 8vw;
-  height: 8vh;
+  height: 8.2vh;
+  margin-right: -0.8em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -529,10 +577,11 @@ i.fas.fa-arrow-left {
 }
 .block-dishes {
   animation: delaid 1000ms;
+  animation-delay: 500ms;
 }
 
 .batch {
-  animation: delaid 1000ms 150ms;
+  animation: delaid 1000ms 250ms;
 }
 .batch--1 {
   animation-delay: 250ms;

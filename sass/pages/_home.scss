@@ -166,6 +166,9 @@
     -webkit-text-fill-color: transparent;
     transform: scale(0);
 }
+i.far.fa-heart.fa-stack-1x {
+    border: $colour-black;
+}
 
 /*#purple-heart {
     color: $colour-black;
@@ -201,5 +204,42 @@
 
 //*Loader//
 
+$cd-bars: $colour-primary;
+$size: 3vh;
+$num-ball: 3;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-ball;
+
+.load {
+    display: flex;
+    justify-content: space-evenly;
+    &__ball {
+        background-color: $cd-bars;
+        height: 100%;
+        width: $size;
+        animation: grow $anim-dur;
+        animation-fill-mode: forwards;
+    }
+}
 
 
+.load__ball {
+    animation: grow $anim-dur;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    @for $i from 1 through $num-ball {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+             }
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
