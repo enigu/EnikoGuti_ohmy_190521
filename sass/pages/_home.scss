@@ -207,7 +207,7 @@ i.far.fa-heart.fa-stack-1x {
 $cd-bars: $colour-primary;
 $size: 3vh;
 $num-ball: 3;
-$anim-dur: 1000ms;
+$anim-dur: 500ms;
 $anim-delay: $anim-dur / $num-ball;
 
 .load {
@@ -217,14 +217,15 @@ $anim-delay: $anim-dur / $num-ball;
         background-color: $cd-bars;
         height: 100%;
         width: $size;
-        animation: grow $anim-dur;
+        animation: grow $anim-dur infinite;
         animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
     }
 }
 
 
 .load__ball {
-    animation: grow $anim-dur;
+    animation: grow $anim-dur infinite;
     border-radius: 50%;
     height: 20px;
     width: 20px;

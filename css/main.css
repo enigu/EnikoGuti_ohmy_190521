@@ -401,24 +401,25 @@ i.far.fa-heart.fa-stack-1x {
   background-color: #9356DC;
   height: 100%;
   width: 3vh;
-  animation: grow 1000ms;
+  animation: grow 500ms infinite;
   animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 
 .load__ball {
-  animation: grow 1000ms;
+  animation: grow 500ms infinite;
   border-radius: 50%;
   height: 20px;
   width: 20px;
 }
 .load__ball--1 {
-  animation-delay: 333.3333333333ms;
+  animation-delay: 166.6666666667ms;
 }
 .load__ball--2 {
-  animation-delay: 666.6666666667ms;
+  animation-delay: 333.3333333333ms;
 }
 .load__ball--3 {
-  animation-delay: 1000ms;
+  animation-delay: 500ms;
 }
 
 @keyframes grow {
