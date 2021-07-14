@@ -26,16 +26,17 @@
   font-size: inherit;
 }
 .btn-gradient:hover {
-  background-image: radial-gradient(circle, #ff93e1 0%, #8641d8 100%);
+  background-image: linear-gradient(to bottom, #ff93e1, #ae80e5);
+  border: 1px solid #ae80e5;
 }
 
 .btn-options {
   background-color: #f4f5f7;
   border: 1px solid #f4f5f7;
   border-radius: 18px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
   height: 4.2em;
-  width: 24em;
+  width: 20em;
   margin-bottom: 1em;
   margin-left: 1em;
   margin-right: 1em;
@@ -44,16 +45,18 @@
   justify-content: center;
   cursor: pointer;
   position: relative;
+  text-decoration: none;
   z-index: 1;
 }
 .btn-options::after {
   content: "";
+  border: 1px solid #e9ddf8;
+  border-radius: 18px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  left: 0;
   background: #e9ddf8;
   z-index: -1;
   transform: scaleX(0);
@@ -64,11 +67,9 @@
   transform: scaleX(1);
   transform-origin: bottom;
 }
-
-.fa-mobile-alt {
-  background: #000;
-  transform: scaleX(0);
-  transition: transform 200ms ease-in;
+.btn-options:hover:hover .purple-icon {
+  color: #9356DC;
+  opacity: 1;
 }
 
 .btn-new {
@@ -87,33 +88,22 @@
   background-color: #FFF;
   border: 1px solid #FFF;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
-  height: 8vh;
+  height: 9vh;
   margin-bottom: 1em;
-}
-.btn-simple h3 {
-  font-family: "Roboto Regular", sans-serif;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #000;
-  line-height: 1.4em;
-  margin-left: 0.8em;
-}
-.btn-simple h6 {
-  font-family: "Roboto Light", sans-serif;
-  font-size: 1.2em;
-  font-weight: 200;
-  color: #000;
-  line-height: 1.4em;
-  margin-left: 0.8em;
+  text-decoration: none;
 }
 .btn-simple:hover .check {
   transform: scale(1);
+  margin-right: 0;
+}
+.btn-simple:hover h6 {
+  text-overflow: ellipsis;
 }
 
 footer {
@@ -186,18 +176,16 @@ header img {
 
 .restaurant-discovery {
   background-color: #f4f5f7;
-  display: inline-block;
+  display: block;
   text-align: center;
   padding-left: 1em;
   padding-right: 1em;
 }
-.restaurant-discovery h1 {
+.restaurant-discovery h2 {
   font-family: "Roboto Medium", sans-serif;
   font-size: 1.3em;
   font-weight: bold;
   color: #000;
-  display: inline-block;
-  text-align: center;
   margin-top: 0.4em;
   margin-bottom: 0.2em;
 }
@@ -206,8 +194,6 @@ header img {
   font-size: 1em;
   font-weight: 200;
   color: #000;
-  display: inline-block;
-  text-align: center;
   margin-top: 0.2em;
   margin-bottom: 0.4em;
 }
@@ -216,12 +202,18 @@ header img {
   text-align: center;
 }
 
-.options h1 {
+.options {
+  display: inline-block;
+  width: 98%;
+}
+.options h2 {
   font-family: "Roboto Medium", sans-serif;
   font-size: 1.3em;
   font-weight: bold;
   color: #000;
   margin-left: 0.6em;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
 }
 
 .options-buttons {
@@ -263,14 +255,20 @@ header img {
 
 .fa-mobile-alt {
   margin-right: 1em;
+  color: #000;
+  opacity: 0.5;
 }
 
 .fa-list-ul {
   margin-right: 1em;
+  color: #000;
+  opacity: 0.5;
 }
 
 .fa-store {
   margin-right: 1em;
+  color: #000;
+  opacity: 0.5;
 }
 
 .restaurants {
@@ -278,7 +276,7 @@ header img {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.restaurants h1 {
+.restaurants h2 {
   font-family: "Roboto Medium", sans-serif;
   font-size: 1.3em;
   font-weight: bold;
@@ -344,6 +342,7 @@ header img {
   margin-top: 4px;
   margin-bottom: 0px;
   color: #000;
+  margin-left: 0.6em;
 }
 
 .hover-heart:hover .purple-heart {
@@ -352,7 +351,7 @@ header img {
 }
 
 .purple-heart {
-  background: radial-gradient(circle, #ff93e1 0%, #782cd3 100%);
+  background: radial-gradient(circle, #a16be0 0%, #ff46cc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(0);
@@ -374,13 +373,14 @@ i.far.fa-heart.fa-stack-1x {
   background-color: #9356DC;
   height: 100%;
   width: 3vh;
-  animation: grow 500ms infinite;
+  animation: grow 500ms 20ms;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  transform: scaleY(0);
 }
 
 .load__ball {
-  animation: grow 500ms infinite;
+  animation: grow 500ms 20ms;
   border-radius: 50%;
   height: 2em;
   width: 2em;
@@ -405,6 +405,7 @@ i.far.fa-heart.fa-stack-1x {
 }
 :root {
   --surface-color:$colour-grey-discovery;
+  display: block;
 }
 
 * {
@@ -425,6 +426,7 @@ i.fas.fa-arrow-left {
   box-shadow: 0 0 0.95rem rgba(0, 0, 0, 0.2);
   display: block;
   width: 100%;
+  text-align: center;
 }
 
 .top {
@@ -448,7 +450,7 @@ i.fas.fa-arrow-left {
   margin-left: 0.8em;
   margin-right: 0.6em;
 }
-.title-heart h1 {
+.title-heart h2 {
   font-family: "Shrikhand";
   font-size: 1.8rem;
   color: #000;
@@ -479,6 +481,7 @@ i.fas.fa-arrow-left {
   text-transform: uppercase;
   position: relative;
   line-height: 2rem;
+  text-align: start;
 }
 .block-dishes h4::after {
   content: "";
@@ -491,15 +494,33 @@ i.fas.fa-arrow-left {
 }
 
 .dish {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: block;
+  text-align: start;
+  height: 8.7vh;
+}
+.dish h3 {
+  font-family: "Roboto Regular", sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000;
+  line-height: 1.4em;
+  margin-left: 0.8em;
+}
+.dish h6 {
+  font-family: "Roboto Light", sans-serif;
+  font-size: 1.2em;
+  font-weight: 200;
+  color: #000;
+  line-height: 1.4em;
+  margin-left: 0.8em;
+  width: 320px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .price {
   display: inline-flex;
   align-items: center;
-  margin-right: 0.8em;
 }
 .price p {
   font-family: "Roboto Regular", sans-serif;
@@ -507,6 +528,7 @@ i.fas.fa-arrow-left {
   font-weight: bold;
   color: #000;
   line-height: 1.4em;
+  margin-right: 0.8em;
 }
 
 .fa-check-circle {
@@ -527,10 +549,10 @@ i.fas.fa-arrow-left {
   background-color: #99E2D0;
   border: 0;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
   width: 8vw;
-  height: 8.2vh;
-  margin-right: -0.8em;
+  height: 9vh;
+  margin-right: -4em;
   display: flex;
   align-items: center;
   justify-content: center;

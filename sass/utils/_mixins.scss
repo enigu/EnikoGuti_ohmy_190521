@@ -66,7 +66,14 @@ $box-shadow-colour: rgba(0,0,0,0.2);
     border-bottom: 3px solid $colour-tertiary;
 }
 
-@mixin title-h1 {
+@mixin shrikhand {
+    font-family: 'Shrikhand';
+    font-size: 1.8rem;
+    color: $colour-black;
+    margin-left: 0.8em;
+}
+
+@mixin title-h2-bold {
     font-family: $roboto-medium;
     font-size: $h1-font-size;
     font-weight: bold;
@@ -82,7 +89,7 @@ $box-shadow-colour: rgba(0,0,0,0.2);
 
 @mixin title-h3 {
     font-family: $roboto-regular;
-    font-size: 1.2em;
+    font-size: $h2-font-size;
     font-weight: bold;
     color: $colour-black;
     line-height: 1.4em;

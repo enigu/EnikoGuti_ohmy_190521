@@ -19,19 +19,17 @@
 
 .restaurant-discovery {
     background-color: $colour-grey-discovery;
-    display: inline-block;
+    display: block;
     text-align: center;
     padding-left: 1em;
     padding-right: 1em;
-    h1 {
-        @include title-h1;
-        @include inline-block;
+    h2 {
+        @include title-h2-bold;
         margin-top: 0.4em;
         margin-bottom: 0.2em;
     }
     p {
         @include p-thin;
-        @include inline-block;
         margin-top: 0.2em;
         margin-bottom: 0.4em;
     }
@@ -42,9 +40,13 @@
 }
 
 .options {
-    h1 {
-        @include title-h1;
+    display: inline-block;
+    width: 98%;
+    h2 {
+        @include title-h2-bold;
         margin-left: $margin-home-page;
+        margin-top: $margin-home-page;
+        margin-bottom: $margin-home-page;
     }
 }
 
@@ -84,28 +86,32 @@
 
 .fa-mobile-alt {
     margin-right: 1em;
+    color: $colour-black;
+    opacity: 0.5;
 }
 .fa-list-ul {
     margin-right: 1em;
+    color: $colour-black;
+    opacity: 0.5;
 }
-
 .fa-store {
     margin-right: 1em;
+    color: $colour-black;
+    opacity: 0.5;
 }
 
 .restaurants {
     background-color: $colour-grey-discovery;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    h1 {
-        @include title-h1;
+    h2 {
+        @include title-h2-bold;
         margin-left: $margin-home-page;
     }
 }
 
 .cards {
-    width: 98%;
-    
+    width: 98%;   
 }
 
 .restaurant-card {
@@ -128,7 +134,6 @@
         object-fit: cover;
     }
 }
-
 
 .card-info {
     background-color: $colour-white;
@@ -155,6 +160,7 @@
         margin-top: 4px;
         margin-bottom: 0px;
         color: $colour-black;
+        margin-left: $margin-home-page;
     }
 }
 
@@ -163,7 +169,7 @@
     transition: 0.5s;
 }
 .purple-heart {
-    background: radial-gradient(circle, lighten($colour-secondary, 5) 0%, darken($colour-primary, 10) 100%);
+    background: radial-gradient(circle, lighten($colour-primary, 5) 0%, darken($colour-secondary, 10) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: scale(0);
@@ -191,15 +197,15 @@ $anim-delay: $anim-dur / $num-ball;
         background-color: $cd-bars;
         height: 100%;
         width: $size;
-        animation: grow $anim-dur infinite;
+        animation: grow $anim-dur 20ms;
         animation-fill-mode: forwards;
         animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        transform: scaleY(0);
     }
 }
 
-
 .load__ball {
-    animation: grow $anim-dur infinite;
+    animation: grow $anim-dur 20ms;
     border-radius: 50%;
     height: 2em;
     width: 2em;
