@@ -128,3 +128,24 @@ $box-shadow-colour: rgba(0,0,0,0.2);
     display: inline-block;   
     text-align: center; 
 }
+
+
+//* Media-queries *//
+
+$breakpoint-small: 600px;
+$breakpoint-large: 960px;
+
+
+@mixin screen($size, $type: max, $pixels: $breakpoint-small) {
+    @if $size == 'small' {
+      @media screen and ($type + -width: $breakpoint-small) {
+          @content;
+      }
+    }
+    @else if $size == 'large' {
+      @media screen and ($type + -width: $breakpoint-large) {
+          @content;
+      }
+    }
+}    
+

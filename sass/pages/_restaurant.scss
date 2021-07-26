@@ -20,6 +20,15 @@ i.fas.fa-arrow-left {
     margin-left: $margin-left;
 }
 
+header a {
+    color: $colour-black;
+    display: inline-block;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: $margin-left;
+}
+
 .restaurant-menu {
     background-color: $colour-grey-discovery;
     @include btn-simple-box-shadow;
@@ -79,15 +88,30 @@ i.fas.fa-arrow-left {
 }
 
 .dish-buttons {
+    grid-row-start: 2;
     display: inline-block;
     margin: $margin-left;
-    width: 95%;
+    width: 98%;
 }
 
 .block-dishes {
     width: 95%;
     margin: auto;
+    display: grid;
+    grid-template-columns: 3fr;
+        @include screen(small) {
+            grid-template-columns: 3fr;
+        }
+        @include screen(large) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "h4 h4 h4"
+                ".dish-buttons .dish-buttons .dish-buttons"
+        }  
     h4 {
+        grid-row-start: 1;
+        grid-column-start: 1;
         @include title-h4;
         margin-left: $margin-left;
         text-transform: uppercase;
@@ -154,7 +178,7 @@ i.fas.fa-arrow-left {
     border: 0;
     border-radius: 0px 12px 12px 0px;
     //*box-shadow: $box-shadow;//*
-    width: 8.1vw;
+    width: 56px;
     height: 9.2vh;
     margin-right: -4em;
     display: flex;
@@ -182,13 +206,13 @@ $anim-dur: 1000ms;
 $num-bars: 4;
 $anim-delay: $anim-dur / $num-bars;
 
-.block-dishes {
+.btn-simple {
     animation: delaid $anim-dur;
     animation-delay: 500ms;
 }
 
 .batch {
-    animation: delaid $anim-dur 250ms;
+    animation: delaid $anim-dur 500ms;
     @for $i from 1 to $num-bars {
         &--#{$i} {
             animation-delay: $anim-delay * $i;

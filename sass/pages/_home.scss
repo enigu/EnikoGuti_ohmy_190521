@@ -111,7 +111,16 @@
 }
 
 .cards {
-    width: 98%;   
+    width: 98%;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-gap: 16px;
+        @include screen(small) {
+            grid-template-columns: 2fr;
+        }
+        @include screen(large) {
+            grid-template-columns: 1fr 1fr;
+        }  
 }
 
 .restaurant-card {
@@ -224,3 +233,8 @@ $anim-delay: $anim-dur / $num-ball;
         transform: scaleY(1);
     }
 }
+
+
+
+
+
