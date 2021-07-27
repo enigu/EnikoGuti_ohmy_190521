@@ -301,17 +301,6 @@ header img {
   }
 }
 
-.restaurant-card {
-  width: auto;
-  height: auto;
-  border-radius: 10px 10px 10px 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  margin: 1rem 0.6rem 1rem 0.6rem;
-}
-.restaurant-card a {
-  text-decoration: none;
-}
-
 .img-container {
   position: relative;
   width: 100%;
@@ -379,6 +368,7 @@ i.far.fa-heart.fa-stack-1x {
   justify-content: space-evenly;
   position: absolute;
   z-index: 1;
+  overflow: hidden;
   left: 20em;
   right: 20em;
 }
@@ -386,26 +376,27 @@ i.far.fa-heart.fa-stack-1x {
   background-color: #9356DC;
   height: 100%;
   width: 3vh;
-  animation: grow 500ms 20ms;
+  animation: grow 1000ms 200ms;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
   transform: scaleY(0);
 }
 
 .load__ball {
-  animation: grow 500ms 20ms;
-  border-radius: 50%;
-  height: 2em;
-  width: 2em;
+  animation: grow 1000ms 200ms;
+  height: 16vh;
+  width: 6vw;
+  display: flex;
+  justify-content: space-evenly;
 }
 .load__ball--1 {
-  animation-delay: 166.6666666667ms;
-}
-.load__ball--2 {
   animation-delay: 333.3333333333ms;
 }
+.load__ball--2 {
+  animation-delay: 666.6666666667ms;
+}
 .load__ball--3 {
-  animation-delay: 500ms;
+  animation-delay: 1000ms;
 }
 
 @keyframes grow {
@@ -414,6 +405,28 @@ i.far.fa-heart.fa-stack-1x {
   }
   100% {
     transform: scaleY(1);
+  }
+}
+.restaurant-card {
+  animation: card 2200ms;
+  transform-origin: left;
+  animation-fill-mode: forwards;
+  width: auto;
+  height: auto;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin: 1rem 0.6rem 1rem 0.6rem;
+}
+.restaurant-card a {
+  text-decoration: none;
+}
+
+@keyframes card {
+  from {
+    transform: translateX(-9999px);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 :root {

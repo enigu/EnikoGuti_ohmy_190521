@@ -123,16 +123,6 @@
         }  
 }
 
-.restaurant-card {
-    width: auto;
-    height: auto;
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    margin: 1rem 0.6rem 1rem 0.6rem;
-    a { 
-        text-decoration: none;
-    }
-}
 .img-container {
     position: relative;
     width: 100%;
@@ -192,7 +182,7 @@ i.far.fa-heart.fa-stack-1x {
 $cd-bars: $colour-primary;
 $size: 3vh;
 $num-ball: 3;
-$anim-dur: 500ms;
+$anim-dur: 1000ms;
 $anim-delay: $anim-dur / $num-ball;
 
 .load {
@@ -200,13 +190,14 @@ $anim-delay: $anim-dur / $num-ball;
     justify-content: space-evenly;
     position: absolute;
     z-index: 1;
+    overflow: hidden;
     left: 20em;
     right: 20em;
     &__ball {
         background-color: $cd-bars;
         height: 100%;
         width: $size;
-        animation: grow $anim-dur 20ms;
+        animation: grow $anim-dur 200ms;
         animation-fill-mode: forwards;
         animation-timing-function: cubic-bezier(0, 1, 1, 0);
         transform: scaleY(0);
@@ -214,10 +205,11 @@ $anim-delay: $anim-dur / $num-ball;
 }
 
 .load__ball {
-    animation: grow $anim-dur 20ms;
-    border-radius: 50%;
-    height: 2em;
-    width: 2em;
+    animation: grow $anim-dur 200ms;
+    height: 16vh;
+    width: 6vw;
+    display: flex;
+    justify-content: space-evenly;
     @for $i from 1 through $num-ball {
             &--#{$i} {
                 animation-delay: $anim-delay * $i;
@@ -232,6 +224,30 @@ $anim-delay: $anim-dur / $num-ball;
     100% {
         transform: scaleY(1);
     }
+}
+
+
+.restaurant-card {
+    animation: card 2200ms;
+    transform-origin: left;
+    animation-fill-mode: forwards;
+    width: auto;
+    height: auto;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin: 1rem 0.6rem 1rem 0.6rem;
+    a { 
+        text-decoration: none;
+    }
+}
+
+@keyframes card {
+    from {
+        transform: translateX(-9999px);
+    }
+    to {
+        transform: translateX(0);
+}
 }
 
 
