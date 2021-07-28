@@ -40,25 +40,25 @@ header a {
 .top-1 {
     background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) no-repeat center / cover;
     width: 100%;
-    height: 30vh;
+    height: 36vh;
 }
 
 .top-2 {
     background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg) no-repeat center / cover;
     width: 100%;
-    height: 30vh;
+    height: 36vh;
 }
 
 .top-3 {
     background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg) no-repeat center / cover;
     width: 100%;
-    height: 30vh;
+    height: 36vh;
 }
 
 .top-4 {
     background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg) no-repeat center / cover;
     width: 100%;
-    height: 30vh;
+    height: 36vh;
 }
 
 
@@ -94,21 +94,21 @@ header a {
     width: 98%;
 }
 
-.block-dishes {
-    width: 95%;
-    margin: auto;
+.grid-blocks {
     display: grid;
-    grid-template-columns: 3fr;
-        @include screen(small) {
-            grid-template-columns: 3fr;
-        }
-        @include screen(large) {
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: auto;
-            grid-template-areas: 
-                "h4 h4 h4"
-                ".dish-buttons .dish-buttons .dish-buttons"
-        }  
+    @include responsive(mobile) {
+        grid-template-columns: 1fr;
+    }
+    @include responsive(tablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include responsive(desktop) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.block-dishes {
+    width: 95%;  
     h4 {
         grid-row-start: 1;
         grid-column-start: 1;
@@ -131,17 +131,23 @@ header a {
 }
 
 .dish {
-    display: block;
+    display: flex;
     text-align: start;
-    height: 8.7vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
     h3 {
         @include title-h3;
         margin-left: $margin-left;
+        width: 230px;
+        overflow: hidden;
+        white-space: nowrap;
     }
     h6 {
         @include title-h6;
         margin-left: $margin-left;
-        width: 320px;
+        width: 230px;
         overflow: hidden;
         white-space: nowrap;
     }
@@ -177,7 +183,6 @@ header a {
     background-color: $colour-tertiary;
     border: 0;
     border-radius: 0px 12px 12px 0px;
-    //*box-shadow: $box-shadow;//*
     width: 56px;
     height: 9.2vh;
     margin-right: -4em;
@@ -219,6 +224,8 @@ $anim-delay: $anim-dur / $num-bars;
          }
     }
 }
+
+
 
 
 

@@ -92,7 +92,7 @@
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
   height: 9vh;
   margin-bottom: 1em;
@@ -103,6 +103,9 @@
   margin-right: 0;
 }
 .btn-simple:hover h6 {
+  text-overflow: ellipsis;
+}
+.btn-simple:hover h3 {
   text-overflow: ellipsis;
 }
 
@@ -285,17 +288,20 @@ header img {
 }
 
 .cards {
-  width: 98%;
   display: grid;
-  grid-template-columns: 2fr;
   grid-gap: 16px;
 }
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   .cards {
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr;
   }
 }
-@media screen and (max-width: 960px) {
+@media only screen and (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1100px) {
   .cards {
     grid-template-columns: 1fr 1fr;
   }
@@ -467,25 +473,25 @@ header a {
 .top-1 {
   background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) no-repeat center/cover;
   width: 100%;
-  height: 30vh;
+  height: 36vh;
 }
 
 .top-2 {
   background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg) no-repeat center/cover;
   width: 100%;
-  height: 30vh;
+  height: 36vh;
 }
 
 .top-3 {
   background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg) no-repeat center/cover;
   width: 100%;
-  height: 30vh;
+  height: 36vh;
 }
 
 .top-4 {
   background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg) no-repeat center/cover;
   width: 100%;
-  height: 30vh;
+  height: 36vh;
 }
 
 .menu-card {
@@ -523,23 +529,27 @@ header a {
   width: 98%;
 }
 
+.grid-blocks {
+  display: grid;
+}
+@media only screen and (min-width: 600px) {
+  .grid-blocks {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .grid-blocks {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .grid-blocks {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .block-dishes {
   width: 95%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 3fr;
-}
-@media screen and (max-width: 600px) {
-  .block-dishes {
-    grid-template-columns: 3fr;
-  }
-}
-@media screen and (max-width: 960px) {
-  .block-dishes {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "h4 h4 h4" ".dish-buttons .dish-buttons .dish-buttons";
-  }
 }
 .block-dishes h4 {
   grid-row-start: 1;
@@ -565,9 +575,12 @@ header a {
 }
 
 .dish {
-  display: block;
+  display: flex;
   text-align: start;
-  height: 8.7vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
 }
 .dish h3 {
   font-family: "Roboto Regular", sans-serif;
@@ -576,15 +589,18 @@ header a {
   color: #000;
   line-height: 1.4em;
   margin-left: 0.8em;
+  width: 230px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .dish h6 {
   font-family: "Roboto Light", sans-serif;
-  font-size: 1.2em;
+  font-size: 1rem;
   font-weight: 200;
   color: #000;
   line-height: 1.4em;
   margin-left: 0.8em;
-  width: 320px;
+  width: 230px;
   overflow: hidden;
   white-space: nowrap;
 }

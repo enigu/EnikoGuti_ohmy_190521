@@ -104,7 +104,7 @@ $box-shadow-colour: rgba(0,0,0,0.2);
 
 @mixin title-h6 {
     font-family: $roboto-light;
-    font-size: 1.2em;
+    font-size: 1rem;
     font-weight: 200;
     color: $colour-black;
     line-height: 1.4em;
@@ -132,20 +132,15 @@ $box-shadow-colour: rgba(0,0,0,0.2);
 
 //* Media-queries *//
 
-$breakpoint-small: 600px;
-$breakpoint-large: 960px;
-
-
-@mixin screen($size, $type: max, $pixels: $breakpoint-small) {
-    @if $size == 'small' {
-      @media screen and ($type + -width: $breakpoint-small) {
-          @content;
-      }
+@mixin responsive($breakpoint) {
+    @if $breakpoint == mobile {
+        @media only screen and (min-width: 600px) {@content };
     }
-    @else if $size == 'large' {
-      @media screen and ($type + -width: $breakpoint-large) {
-          @content;
-      }
+    @if $breakpoint == tablet {
+        @media only screen and (min-width: 768px) {@content };
     }
-}    
+    @if $breakpoint == desktop {
+        @media only screen and (min-width: 1100px) {@content };
+    }
+}
 

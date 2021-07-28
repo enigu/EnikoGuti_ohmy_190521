@@ -111,16 +111,19 @@
 }
 
 .cards {
-    width: 98%;
     display: grid;
-    grid-template-columns: 2fr;
     grid-gap: 16px;
-        @include screen(small) {
-            grid-template-columns: 2fr;
-        }
-        @include screen(large) {
-            grid-template-columns: 1fr 1fr;
-        }  
+    @include responsive(mobile) {
+        grid-template-columns: 1fr;
+    }
+    @include responsive(tablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include responsive(desktop) {
+        grid-template-columns: 1fr 1fr;
+    }
+        
 }
 
 .img-container {
