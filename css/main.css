@@ -99,8 +99,9 @@
   text-decoration: none;
 }
 .btn-simple:hover .check {
-  transform: scale(1);
   margin-right: 0;
+  transform: scale(1);
+  transition: transform ease-in-out;
 }
 .btn-simple:hover h6 {
   text-overflow: ellipsis;
@@ -318,6 +319,17 @@ header img {
   object-fit: cover;
 }
 
+.restaurant-card {
+  width: auto;
+  height: auto;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin: 1rem 0.6rem 1rem 0.6rem;
+}
+.restaurant-card a {
+  text-decoration: none;
+}
+
 .card-info {
   background-color: #FFF;
   display: flex;
@@ -372,6 +384,7 @@ i.far.fa-heart.fa-stack-1x {
 .load {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 24rem;
   position: absolute;
   z-index: 1;
   overflow: hidden;
@@ -390,7 +403,7 @@ i.far.fa-heart.fa-stack-1x {
 
 .load__ball {
   animation: grow 1000ms 200ms;
-  height: 16vh;
+  height: 36vh;
   width: 6vw;
   display: flex;
   justify-content: space-evenly;
@@ -413,18 +426,10 @@ i.far.fa-heart.fa-stack-1x {
     transform: scaleY(1);
   }
 }
-.restaurant-card {
+.loader-animation {
   animation: card 2200ms;
   transform-origin: left;
   animation-fill-mode: forwards;
-  width: auto;
-  height: auto;
-  border-radius: 10px 10px 10px 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  margin: 1rem 0.6rem 1rem 0.6rem;
-}
-.restaurant-card a {
-  text-decoration: none;
 }
 
 @keyframes card {
@@ -646,7 +651,7 @@ header a {
 }
 .check:hover .fa-check-circle {
   transform: rotate(360deg);
-  transition: transform 500ms ease-in-out;
+  transition: transform 250ms ease-out 50ms;
 }
 
 @keyframes delaid {

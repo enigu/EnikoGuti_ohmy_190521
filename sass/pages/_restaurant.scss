@@ -192,7 +192,7 @@ header a {
     transform: scale(0);
     &:hover .fa-check-circle {
         transform: rotate(360deg);
-        transition: transform 500ms ease-in-out;
+        transition: transform 250ms ease-out 50ms;
     }
 }
 

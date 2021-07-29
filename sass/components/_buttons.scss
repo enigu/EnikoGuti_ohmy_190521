@@ -92,8 +92,9 @@
     margin-bottom: 1em;
     text-decoration: none;
         &:hover .check {
-            transform: scale(1);
             margin-right: 0;
+            transform: scale(1);
+            transition: transform ease-in-out;
     }
         &:hover h6 {
             text-overflow: ellipsis;
