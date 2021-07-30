@@ -178,7 +178,7 @@
 .hover-heart:hover .purple-heart{
     transform: scale(1);
     transition: 0.5s;
-}
+}   
 .purple-heart {
     background: radial-gradient(circle, lighten($colour-primary, 5) 0%, darken($colour-secondary, 10) 100%);
     -webkit-background-clip: text;
