@@ -501,6 +501,19 @@ header a {
   opacity: 0.7;
 }
 
+.hover-heart:hover .big-purple-heart {
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.big-purple-heart {
+  font-size: 1.8rem;
+  background: radial-gradient(circle, #a16be0 0%, #ff46cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0);
+}
+
 .dish-buttons {
   grid-row-start: 2;
   display: inline-block;
@@ -569,7 +582,7 @@ header a {
   line-height: 1.4em;
   margin-left: 0.8em;
   width: 230px;
-  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 .dish h6 {
@@ -580,7 +593,7 @@ header a {
   line-height: 1.4em;
   margin-left: 0.8em;
   width: 230px;
-  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -624,11 +637,11 @@ header a {
   height: 9vh;
   margin-bottom: 1em;
   text-decoration: none;
+  overflow: hidden;
 }
 .btn-simple:hover .check {
   margin-right: 0;
-  transform: scale(1);
-  transition: transform 350ms ease-in-out;
+  transition: 350ms;
 }
 .btn-simple:hover h6 {
   text-overflow: ellipsis;
@@ -647,7 +660,7 @@ header a {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: scale(0);
+  transition: 350ms;
 }
 .check:hover .fa-check-circle {
   transform: rotate(360deg);

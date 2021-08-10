@@ -87,6 +87,19 @@ header a {
     opacity: 0.7;
 }
 
+.hover-heart:hover .big-purple-heart{
+    transform: scale(1);
+    transition: 0.5s;
+}  
+
+.big-purple-heart {
+    font-size: 1.8rem;
+    background: radial-gradient(circle, lighten($colour-primary, 5) 0%, darken($colour-secondary, 10) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(0);
+}
+
 .dish-buttons {
     grid-row-start: 2;
     display: inline-block;
@@ -141,14 +154,14 @@ header a {
         @include title-h3;
         margin-left: $margin-left;
         width: 230px;
-        overflow: hidden;
+        text-overflow: ellipsis;
         white-space: nowrap;
     }
     h6 {
         @include title-h6;
         margin-left: $margin-left;
         width: 230px;
-        overflow: hidden;
+        text-overflow: ellipsis;
         white-space: nowrap;
     }
 }
@@ -192,10 +205,11 @@ header a {
     height: 9vh;
     margin-bottom: 1em;
     text-decoration: none;
+    overflow: hidden;
+    //transition: 350ms ease-in-out;
         &:hover .check {
             margin-right: 0;
-            transform: scale(1);
-            transition: transform 350ms ease-in-out;
+            transition: 350ms;
     }
         &:hover h6 {
             text-overflow: ellipsis;
@@ -215,7 +229,7 @@ header a {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: scale(0);
+    transition: 350ms;
     &:hover .fa-check-circle {
         transform: rotate(360deg);
         transition: transform 250ms ease-out;
