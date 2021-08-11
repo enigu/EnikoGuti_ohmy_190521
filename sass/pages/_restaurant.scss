@@ -153,14 +153,14 @@ header a {
     h3 {
         @include title-h3;
         margin-left: $margin-left;
-        width: 230px;
+        width: 200px;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
     h6 {
         @include title-h6;
         margin-left: $margin-left;
-        width: 230px;
+        width: 200px;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
